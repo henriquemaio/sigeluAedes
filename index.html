@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="Sigelu">
+    <link rel="icon" href="dist/img/favicon.ico">
+    <title>Login SIGELU Aedes</title>
+
+
+    <link href="dist/css/font-awesome.min.css" rel="stylesheet">
+    <link href="dist/css/AdminLTE.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="dist/css/login.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+         function somethingInvalid(){
+          $("#somethingWrong").css("display", "block");
+          var $formContainer = $('.login__input');
+          $formContainer.addClass('invalid');
+          setTimeout(function(){
+            $formContainer.removeClass('invalid');
+          },500);
+        }
+        
+        
+        function lostPassword(){
+            $(".loginForm").toggle();
+            $(".passwordForm").toggle();
+            
+        }
+
+    </script>
+</head>
+
+<body>
+    
+    <div class="photo_overlay"></div>
+    
+    <div class="flex-container">
+        <div class="flex-item left-item">
+          
+          <div class="box loginInfos">
+            <div class="box-header with-border">
+              <h3 class="box-title">Informações</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <strong> O Sistema</strong>
+
+              <p class="text-muted">
+                Com o objetivo de consolidar as ações de vistoria e limpeza dos prédios e instalações públicas federais adotadas pelos órgãos e entidades do governo para se eliminar os focos do mosquito Aedes aegypti, o Ministério do Planejamento criou o Formulário de Acompanhamento das Ações Contra o Aedes aegypti. <br>Trata-se de uma ferramenta que deve ser usada pelos órgãos e entidades do Poder Executivo federal para registro das tarefas rotineiras adotadas para o enfrentamento ao mosquito.
+              </p>
+
+              <hr>
+              
+              <strong>Instruções</strong>
+
+              <p class="text-muted">
+                 As ações de combate ao Aedes aegypti são diárias e o formulário deve ser preenchido ao menos uma vez por semana com as seguintes informações: <br>
+- Treinamento: registrar o quantitativo de pessoal que recebeu a primeira capacitação. Novas capacitações para o mesmo pessoal somente podem ser informadas no campo “principais ações de treinamento realizadas”;
+<br><br>
+- Vistorias: registrar o quantitativo de prédios / instalações públicas que receberam um ciclo completo de ações de vistoria e limpeza. Caso algum prédio ou instalação receba mais de um ciclo completo de vistoria e limpeza no decorrer da semana, pode-se registrar no campo “Especificar outros itens, medidas e observações”. Registrar também a quantidade de focos de larva encontrados e a(s) respectiva(s) medida(s) adotada(s). Importante: todo prédio / instalação pública deve ser vistoriado e limpo semanalmente.
+              </p>
+              
+              <div class="logogovernoBox">
+              
+              <img src="dist/img/governoLogo.png" class="governoLogo">
+
+                </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          
+      </div>
+
+        <div class="flex-item loginBox">
+            
+            <div class="loginContent">
+                
+                <div class="logo"><img src="dist/img/LOGO-SIGELU.png"></div>
+                <div class="loginForm">
+                    <form method="post">
+                        <div class="login__row">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <input type="text" class="login__input" placeholder="Matrícula" required="required" >
+                        </div>
+                        <div class="login__row">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            <input type="password" class="login__input" placeholder="Senha" required="required" >
+                        </div>
+                        <p id="somethingWrong"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="padding-right: .5em; color: #E9C265;"></i>Usuário ou senha inválidos</p>
+                        <div class="checkbox keepConnected">
+                            <label>
+                                <input name="remember" type="checkbox" value="Remember Me"> Mantenha-me conectado
+                            </label>
+                        </div>
+
+                        <div align="center" class="form-group captcha">
+                            <div data-sitekey="6Ldm1w8TAAAAAKrEWhT7EjTg72F6aY3Ilt0HcTjR" class="g-recaptcha">
+                                <div>
+                                    <div style="width: 304px; height: 78px;">
+                                        <iframe src="https://www.google.com/recaptcha/api2/anchor?k=6Ldm1w8TAAAAAKrEWhT7EjTg72F6aY3Ilt0HcTjR&amp;co=aHR0cDovL3BhZHVhLmFjY291bnQuc2lnZWx1LmNvbTo4MA..&amp;hl=pt-BR&amp;v=r20160502112552&amp;size=normal&amp;cb=g7n617t1v5lf" title="widget recaptcha" width="304" height="78" role="presentation" frameborder="0" scrolling="no" name="undefined">
+                                        </iframe>
+                                    </div>
+                                    <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; ">
+                                    </textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="login__submit" type="submit" onclick="somethingInvalid();">Entrar</button>
+                        
+                    </form>
+                    <button id="forgotPass" onclick="lostPassword()">Esqueceu a senha?</button>
+                </div>
+                
+                <div class="passwordForm" >
+                    <p>Redefinir de senha</p>
+                    <form method="post">
+                        <div class="login__row" style="padding-bottom: 6%;">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <input type="email" class="login__input" placeholder="Email cadastrado" required="required" >
+                        </div>
+
+                        <p id="recoverErro"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="padding-right: .5em; color: #E9C265;"></i>Endereço de email inválido</p>
+                        
+                        <p id="recoverSuccess"><i class="fa fa-thumbs-up" aria-hidden="true" style="padding-right: .5em; color: #5EBB55;"></i>Uma nova senha foi enviada para o seu email</p>
+                        
+                        <button class="login__submit" type="submit" onclick="somethingInvalid();">Enviar</button>
+                        
+                    </form>
+                    <button id="forgotPass" onclick="lostPassword()">Voltar</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+</body>
+
+</html>
